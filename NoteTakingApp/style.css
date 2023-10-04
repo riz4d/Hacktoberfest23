@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+::-webkit-scrollbar{
+    display: none;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+body{
+    background-image: url("notesbg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+#notes{
+    display: none;
+}
+#alert{
+    display: none;
+}
+#edit-alert{
+    display: none;
+}
+
+.card{
+    background-color: whitesmoke;
+    
+}
+#home .form-control{
+    border: 1px solid black;
+    box-shadow: none !important;
+   
+}
+
+#home .form-control:hover{
+    border-color:black;
+}
