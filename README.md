@@ -50,7 +50,7 @@ Please note that this repository follows an open and inclusive code of conduct. 
 ## Happy Hacking!
 
 Thank you for considering contributing to open source and participating in Hacktoberfest. Your contributions are greatly appreciated, and together, we can make the open source community even better!
-## 😎 Project Admin
+## Project Admin
 
 <table>
   <tr>
@@ -58,7 +58,7 @@ Thank you for considering contributing to open source and participating in Hackt
   </tr>
 </table>
 
-## ⭐ Project Contributors
+## Project Contributors
 <table align="center">
 <tr>
 <td>
