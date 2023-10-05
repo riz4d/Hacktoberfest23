@@ -50,3 +50,18 @@ Please note that this repository follows an open and inclusive code of conduct. 
 ## Happy Hacking!
 
 Thank you for considering contributing to open source and participating in Hacktoberfest. Your contributions are greatly appreciated, and together, we can make the open source community even better!
+## 😎 Project Admin
+
+<table>
+  <tr>
+<td align="center"><a href="https://github.com/riz4d"><img src="https://avatars.githubusercontent.com/u/73955457?v=4" width="100px;" alt=""/><br /><sub><b>Mohamed Rizad</b></sub></a></td>
+  </tr>
+</table>
+
+## ⭐ Project Contributors
+<table align="center">
+<tr>
+<td>
+<a href="https://github.com/riz4d/Hacktoberfest23/graphs/contributors" align="center">
+  <img src="https://contrib.rocks/image?repo=riz4d/Hacktoberfest23" /> 
+</a>
