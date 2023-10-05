@@ -1,0 +1,70 @@
+div.second {position: relative;
+    transform:translate(0px,0px);
+    height: 200px;
+    width: 200px;
+    color: #FFF;
+    background: -moz-radial-gradient( yellow 10%, yellow 20%, white 70%); 
+    background: -webkit-radial-gradient( yellow 10%, yellow 20%, white 70%); 
+    background: -ms-radial-gradient( yellow 10%, yellow 20%, white 70%); 
+}
+.exit{
+    width:200px;
+    height:100px;
+    position: relative;
+    transform: translate(1300px,-200px);
+    background-color: white;
+    box-shadow:10px 10px 5px 5px black;
+    border-radius:20px;
+    color:black;
+    font-size:20px;
+}
+.exit:hover{
+    color:white;
+    background-color:black;
+    box-shadow:10px 10px 5px 5px grey;
+    
+}
+#canvas {
+  width: 100%;
+  background-color:  #87CEFA;
+  background-image:url("http://www.sololearn.com/uploads/css_logo.png");
+  background-repeat:no-repeat ;
+  background-attachment:fixed ; 
+  position:relative ;
+   background: linear-gradient(White, DeepSkyBlue);
+}
+  
+ .kk{
+     border: 5px solid green ;
+     width:90px;
+     height:90px;
+ }
+ button {
+     width:500px;
+     height: 50px;
+     margin-bottom: 5px;
+     text-shadow: 5px 2px 4px yellow;
+     box-shadow: 10px 10px 5px 5px #888888;
+ }
+.thicker{
+    font-weight:900;
+}
+.yby{
+    text-shadow: 5px 2px 4px yellow;
+    text-transform: uppercase;
+}
+ul.pri{
+    border-radius: 0 20px 20px 20px;
+    background-color: green;
+    color: white;
+    padding: 50px;
+    list-style-image: url("http://www.sololearn.com/images/bullet.jpg");
+    list-style-position: inside;
+    overflow:scroll;
+    box-shadow: 10px 10px 5px 5px #888888;
+    transform: skew(10deg);
+    -webkit-transform: skew(10deg);
+}
+img{float: right;
+    width: 120px;
+ box-shadow: 10px 10px 5px 5px #888888;  }

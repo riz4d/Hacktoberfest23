@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="match.js"></script>
+    <div class="second">Circle</div>
+    <a href="file:///C:/Users/Acer/Desktop/games/games.html">
+    <button class="exit">Back to<br/>Home page</button></a>
+    <canvas id="canvas" width="600" height="400">
+    <p class="kk"></p>
+    <div id="box"></div>
+  Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <br />
+    <div align="center">
+    <button id="up"><strong>HIT</strong></button>
+</div>
+<div align="center">
+    <button onclick="show();">PAUSE</button>
+</div>
+<br />
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBIZS8eqVZNrjcgB4YSWz1VFv56P-Fi0jxxQ&usqp=CAU"/>
+<h1 class="yby"><ins>Instructions</ins></h1>
+<ul class="pri">
+<li><p class ="thicker">hit the ball to make runs, once bowled you have to play again</p></li>
+<li><p>you can hit only <strong>4,6,1</strong> run/s</p></li>
+<li><p>sorry for some bugs,I'm just a beginner in game development</p></li>
+<li><p>i'm still working on it,if some bug occur plz re-run the code</p></li></ul>
+<link rel="stylesheet" href="match.css">
+<script >
+    function show() {
+    alert("game paused\npress Ok to resume");
+}
+function getRandomInt(min,max){
+ min=Math.ceil(min);
+ max=Math.floor(max);
+ return Math.floor(Math.random()*(min))+max;}
+
+window.onload=function(){
+  var canvas=document.getElementById("canvas");
+  var context=canvas.getContext("2d");
+  var x=0;
+  var y=200;
+  var a=getRandomInt(500,600);
+  var b=getRandomInt( 300,350);
+  var t=Date.now();
+  var dir=1;
+  var tir=1;
+  var la=1000;
+  var k=0;
+  var of=0;
+  var sir=0;
+  var score =0;
+  let up=document.getElementById ('up');
+  let down=document.getElementById ('down');
+  up.onmousedown=function(){sir=4;}
+  up.ontouchstart=function(){sir=4;}
+  up.onmouseup=function(){sir=0;}
+  up.ontouchend=function(){sir=0;}
+function draw(){
+  context.clearRect(0,0,600,400);
+  context.font = '25px Arial';
+  context.fillText("Score: " + score, 500,30);
+  context.fillText("RUNS:"+of,200,30);
+  context.rect(570,300,1,100);
+  context.fillstyle="#2f4f4f"
+  context.fill();
+  var timePassed=(Date.now()-t)/1000;
+  t=Date.now();
+  context.beginPath();
+  context.rect(530-k,270,4,30);
+  context.fillstyle="#2f4f4f";
+  context. fill();
+  context. beginPath();
+  context.rect(530-k,300,10,100);
+  context. fillStyle="#deb887";
+  context.fill();
+  context .beginPath ();
+  context.arc(x,y,5,0,2*Math.PI);
+  context.fillStyle="#ff0000";
+  context.fill();
+  x+=tir*(a*timePassed);
+  y+=dir*(b*timePassed);
+  if(sir==4 && dir==1){ k+=(la*timePassed);} if(dir==1){
+      if((x>=515&&x<=530) && sir==4 &&  y>300){
+              tir*=-1;
+              y=150;              
+              score+=6;
+              of=6;
+              dir*=0;
+              }
+        else if((490<x && x<515) && sir==4&& y>300){
+             tir*=-1;
+             dir*=0;
+             score+=4;
+             of=4;
+         }         
+         else if((x<490 && x>400)&& sir==4&& y>300){
+             y=400;
+             x=500;
+             tir*=-1;
+             dir*=0;
+             score +=1;
+             of=1;
+         }
+         else if( (y>300 && y<=400)&&(sir==0||sir==4)) {if(x>570){
+       alert("Game over & your score "+score);
+       score=0;
+       k=0;
+   }}else if( (y>300 && y<=400)&&(sir==0)) {if(x>570){
+       alert("Game over & your score "+score);
+       score=0;
+       k=0;
+   }}
+         else{of=0;score+=0;}}
+  if(y>=400){
+    dir*=-1;}
+     if(sir==4 && dir==-1){
+      k+=(la*timePassed);}
+        if(dir==-1){
+          if((x>=515&&x<=530) && sir==4 &&  y>300){
+              tir*=-1;
+              y=150;              
+              score+=6;
+              of=6;
+              dir*=0;
+              }
+        else if((490<x && x<515) && sir==4&& y>300){
+             tir*=-1;
+             dir*=0;
+             score+=4;
+             of=4;
+         }         
+         else if((x<490)&& sir==4 && y>300){
+             y=400;
+             x=500;
+             tir*=-1;
+             dir*=0;
+             score +=1;
+             of=1;
+         }
+       else if(sir==4 && x>(530-k)){ score+=0;}
+        else if( (y>300 && y<=400)&&(sir==4)) {if(x>570){
+       alert("Game over & your score "+score);
+       score=0;
+       k=0;
+   }}else if( (y>300 && y<=400)&&(sir==0)) {if(x>570){
+       alert("Game over & your score "+score);
+       score=0;
+       k=0;
+   }}
+   else{of=0;score+=0;}} 
+ if(x>=600||x<=0){
+     x=0;
+     y=200;
+     k=0;
+     a=getRandomInt(500,600);
+     b=getRandomInt( 300,350);
+     if(of==0){
+     dir=1;
+     x+=-tir*(a*timePassed );
+     y+=dir*(b*timePassed );
+     score=score;}
+     if((of==1)||(of==4)||(of==6)){
+      dir=1;
+      tir=1;
+     x+=tir*(a*timePassed );
+     y+=dir*(b*timePassed );}
+ }
+       }
+setInterval(draw,getRandomInt (10,30))
+}
+</script>
+</body>
+</html>
