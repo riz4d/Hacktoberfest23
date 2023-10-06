@@ -29,14 +29,16 @@
         padding-left: 0;
 
     }
-    .flex-s2 {
+
+    /*the following two .flex-s2 codes are not needed due to using flex-gap in the media query for max-width:1100px*/
+    /* .flex-s2 {
         flex-direction: column;
-    }
-    .flex-s2 {
+    } */
+    /* .flex-s2 {
         margin-top: 30px; 
         height: auto; 
         flex-shrink: 3;
-    }
+    } */
 
     .s1 {
         height: 100vh;
@@ -51,6 +53,19 @@
     
 }
 
+/*the following media query catches uses flex to change from wrapping to the direction of column when images start to slide  off the screen*/
+@media (max-width: 860px) {
+    .flex-s2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .s2 {
+        padding-right: 100px;
+    }
+}
+
 @media (max-width: 1100px) {
     .s1 {
         background-color: #1f2937;
@@ -61,15 +76,26 @@
     .s2 h1 {
         text-align: left;
     }
-    .flex-s2 {
+
+    /*using flex-wrap eliminates the need for the various padding, margin, etc.*/
+    /*the following two .flex-s2 are no longer needed*/
+    /* .flex-s2 {
         flex-direction: column;
         padding-left: 50p;
-    }
-    .flex-s2 {
+    } */
+    /* .flex-s2 {
         margin-top: 30px; 
         height: auto; 
         flex-shrink: 3;
+    } */
+
+    /*flex-wrap allows for 2 columns when screen size shrinks*/
+    /*used flex-gap to create space between each of the imgs*/
+    .flex-s2 {
+        flex-wrap: wrap;
+        gap: 3.25em;
     }
+
     .flx-id {
         justify-content: center;
         
