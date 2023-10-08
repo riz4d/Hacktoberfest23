@@ -104,6 +104,12 @@ let songs = [
       src: "images/letme.jpg",
       singerName:"Alec Benjamin, Arijit Singh"
     },
+    {
+      name: "Naina Da Kasoor",
+      path: "mp3/Naina Da Kasoor-Amit Trivedi.mp3",
+      src: "images/Naina Da Kya Kasoor.jpg",
+      singerName:"Amit Trivedi"
+    }, 
    
    
   ];
