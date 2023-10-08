@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <cstdlib>
+#include <math.h>
 
 using namespace std;
 
@@ -13,7 +14,7 @@ int main(){
     cin >> num2;
 
     char selection;
-    cout << "Enter selection from +,-,*,/ and % :";
+    cout << "Enter selection from +,-,*,/,%,^ :";
     cin >> selection;
     
     switch (selection){       
@@ -44,7 +45,9 @@ int main(){
             }
             cout << num3;
             break;
-         
+        case '^':
+            cout << pow(num1,num2);
+            break;
         
         default:
             cout << "Error! operator is not correct";
